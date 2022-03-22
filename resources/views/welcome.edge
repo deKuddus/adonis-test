@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  @if(flashMessages.has('errors.username'))
+    {{ flashMessages.get('errors.username') }}
+  @endif
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 </head>
 <body>
 
-{{console.log(flashMessages)}}
+
 
 
  <form method="POST" action="{{ route('posts.store') }}">
